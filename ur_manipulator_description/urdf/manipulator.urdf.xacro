@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="ur3_manipulator">
 
-  <xacro:property name="robot_prefix" value="ur3"/>
+  <xacro:property name="robot_prefix" value="ur3_"/>
 
   <!-- Global world frame -->
   <link name="world"/>
@@ -11,17 +11,14 @@
   <xacro:include filename="$(find ur_manipulator_description)/xacro/rbyt_ur_mocked.xacro"/>
 
   <!-- 1) Place the base/platform -->
-  <xacro:base_attachment name="${robot_prefix}_attachment" parent="world"/>
+  <xacro:base_attachment name="${robot_prefix}attachment" parent="world"/>
 
   <!-- 2) Mount the UR arm to the base's link -->
   <xacro:rbyt_ur_description
       name="ur3"
       ur_type="ur3"
       tf_prefix="${robot_prefix}"
-      base_parent="${robot_prefix}_attachment_base_link"
       safety_limits="true">
-    <!-- optional fine-tuning of robot pose on the base -->
-    <!-- <origin xyz="0 0 0.0" rpy="0 0 0"/> -->
   </xacro:rbyt_ur_description>
 
 </robot>
