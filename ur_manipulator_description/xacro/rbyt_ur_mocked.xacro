@@ -1,36 +1,33 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://wiki.ros.org/xacro">
-
+  <!-- Wrapper over UR's ur_robot. No <link name="world"/> here. -->
   <xacro:macro name="rbyt_ur_description" params="
       name:=ur
       ur_type:=ur5
       tf_prefix:=
+      base_parent:=world
       safety_limits:=false
       safety_pos_margin:=0.15
       safety_k_position:=20
       force_abs_paths:=false
       mock_sensor_commands:=false
+      *ur_origin
   ">
 
-    <!-- Include vendor macros -->
     <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
     <xacro:include filename="$(find ur_description)/urdf/ros2_control_mock_hardware.xacro"/>
 
-    <!-- Paths derived from ur_type -->
     <xacro:property name="joint_limit_params"     value="$(find ur_description)/config/${ur_type}/joint_limits.yaml"/>
     <xacro:property name="kinematics_params"      value="$(find ur_description)/config/${ur_type}/default_kinematics.yaml"/>
     <xacro:property name="physical_params"        value="$(find ur_description)/config/${ur_type}/physical_parameters.yaml"/>
     <xacro:property name="visual_params"          value="$(find ur_description)/config/${ur_type}/visual_parameters.yaml"/>
     <xacro:property name="initial_positions_file" value="$(find ur_description)/config/initial_positions.yaml"/>
 
-    <!-- No <link name="world"/> here; caller provides 'parent' -->
-
-    <link name="world"/> 
-
+    <!-- Mount the UR arm to the caller-provided parent -->
     <xacro:ur_robot
         name="${name}"
         tf_prefix="${tf_prefix}"
-        parent="world"
+        parent="${base_parent}"
         joint_limits_parameters_file="${joint_limit_params}"
         kinematics_parameters_file="${kinematics_params}"
         physical_parameters_file="${physical_params}"
@@ -39,15 +36,15 @@
         safety_pos_margin="${safety_pos_margin}"
         safety_k_position="${safety_k_position}"
         force_abs_paths="${force_abs_paths}">
+      <!-- default pose; caller can override with *ur_origin -->
       <origin xyz="0 0 0" rpy="0 0 0"/>
+      <xacro:insert_block name="ur_origin"/>
     </xacro:ur_robot>
 
-    <!-- ros2_control instance (uses params, not $(arg ...)) -->
     <xacro:ur_ros2_control
       name="${name}"
       tf_prefix="${tf_prefix}"
       mock_sensor_commands="${mock_sensor_commands}"
       initial_positions="${xacro.load_yaml(initial_positions_file)}"/>
   </xacro:macro>
-
 </robot>
