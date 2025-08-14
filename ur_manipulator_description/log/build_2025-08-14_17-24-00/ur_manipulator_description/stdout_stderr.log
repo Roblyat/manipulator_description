@@ -1,0 +1,70 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found xacro: 2.0.13 (/opt/ros/jazzy/share/xacro/cmake)
+-- Found rviz2: 14.1.12 (/opt/ros/jazzy/share/rviz2/cmake)
+-- Found robot_state_publisher: 3.3.3 (/opt/ros/jazzy/share/robot_state_publisher/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/build/ur_manipulator_description
+-- Install configuration: ""
+-- Execute custom install script
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/base_attachment.urdf.xacro
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/manipulator.urdf.xacro
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/old_manipulator.urdf.xacro
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/table/license.txt
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/table/table.mtl
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/table/table.obj
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/table/table.png
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/table/table.urdf.xacro
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/table/table2.mtl
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/table/table2.obj
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/table/table2.urdf
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/table/tabletop.jpg
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/urdf/test_wrapper_call.xacro
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/xacro/ft_sensor.gazebo.xacro
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/xacro/rbyt_ur_mocked.xacro
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ament_index/resource_index/package_run_dependencies/ur_manipulator_description
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ament_index/resource_index/parent_prefix_path/ur_manipulator_description
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/environment/ament_prefix_path.sh
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/environment/ament_prefix_path.dsv
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/environment/path.sh
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/environment/path.dsv
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/local_setup.bash
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/local_setup.sh
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/local_setup.zsh
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/local_setup.dsv
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/package.dsv
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ament_index/resource_index/packages/ur_manipulator_description
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/cmake/ur_manipulator_descriptionConfig.cmake
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/cmake/ur_manipulator_descriptionConfig-version.cmake
+-- Symlinking: /ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/install/ur_manipulator_description/share/ur_manipulator_description/package.xml
