@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<robot xmlns:xacro="http://wiki.ros.org/xacro" name="test">
-  <xacro:include filename="$(find ur_manipulator_description)/urdf/rbyt_ur_mocked.xacro"/>
-  <link name="world"/>
-  <xacro:rbyt_ur_description ur_type="ur3" parent="world"/>
-</robot>

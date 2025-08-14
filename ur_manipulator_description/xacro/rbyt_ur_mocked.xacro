@@ -5,7 +5,7 @@
       name:=ur
       ur_type:=ur5
       tf_prefix:=ur5_
-      ur_parent:= ur5_attachment_base_link
+      ur_parent:= ur5_mount_link
       safety_limits:=false
       safety_pos_margin:=0.15
       safety_k_position:=20
