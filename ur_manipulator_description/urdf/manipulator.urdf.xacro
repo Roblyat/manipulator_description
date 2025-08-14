@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="ur3_manipulator">
+
+    <!-- Define a property to select your robot prefix -->
+    <xacro:property name="robot_prefix" value="ur3" />
+
+    <!-- Include base attachment -->
+    <!-- <xacro:include filename="$(find ur_manipulator_description)/urdf/base_attachment.urdf.xacro" /> -->
+
+    <!-- Include UR5 robot from ros_industrial/ur_description -->
+    <xacro:include filename="$(find ur_manipulator_description)/xacro/rbyt_ur_mocked.xacro"/>
+
+    <!-- Include table macro -->
+    <!-- <xacro:include filename="$(find manipulator_description)/urdf/table/table.urdf.xacro" /> -->
+
+    <!-- Define the world link -->
+    <!-- <link name="world" /> -->
+
+    <!-- Call the base attachment using the property value -->
+    <!-- <xacro:base_attachment name="${robot_prefix}_attachment" base_parent="world" robot="${robot_prefix}" /> -->
+
+    <!-- Call the UR robot using the property value -->
+    <xacro:rbyt_ur_description
+      name="ur3"
+      ur_type="ur3"
+      tf_prefix="ur3"
+      safety_limits="true"
+      safety_pos_margin="0.15"
+      safety_k_position="20"
+      force_abs_paths="false"
+      mock_sensor_commands="false"/>
+      
+    <!-- add table -->
+    <!-- <xacro:table name="table" table_parent="world"/> -->
+
+</robot>
