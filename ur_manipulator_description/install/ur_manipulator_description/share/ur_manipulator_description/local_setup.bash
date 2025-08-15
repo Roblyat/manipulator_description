@@ -1,1 +1,0 @@
-/ros2_ws/src/algorithmic_payload_estimation/ur_manipulator_description/ur_manipulator_description/build/ur_manipulator_description/ament_cmake_environment_hooks/local_setup.bash
