@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find ur_description)/urdf/ur_macro.xacro"/>
+
+  <xacro:macro name="rbyt_ur_description" params="
+      name:=ur
+      ur_type:=ur5x
+      tf_prefix:=''
+      ur_parent:=base_link
+
+      joint_limit_params:=''
+      kinematics_params:=''
+      physical_params:=''
+      visual_params:=''
+
+      transmission_hw_interface:=''
+
+      safety_limits:=false
+      safety_pos_margin:=0.15
+      safety_k_position:=20
+
+      headless_mode:=false
+      robot_ip:=0.0.0.0
+      script_filename:=''
+      output_recipe_filename:=''
+      input_recipe_filename:=''
+      reverse_ip:=0.0.0.0
+      script_command_port:=50004
+      reverse_port:=50001
+      script_sender_port:=50002
+      trajectory_port:=50003
+
+      use_tool_communication:=false
+      tool_voltage:=0
+      tool_parity:=0
+      tool_baud_rate:=115200
+      tool_stop_bits:=1
+      tool_rx_idle_chars:=1.5
+      tool_tx_idle_chars:=3.5
+      tool_device_name:=/tmp/ttyUR
+      tool_tcp_port:=54321
+
+      use_fake_hardware:=false
+      fake_sensor_commands:=false
+      sim_gazebo:=false
+      sim_ignition:=false
+      simulation_controllers:=''
+
+      initial_positions_file:=''
+    ">
+
+    <!-- Resolve defaults that require $(find ...) or ${ur_type} -->
+    <xacro:property name="joint_limits_parameters_file"
+      value="${ joint_limit_params if joint_limit_params != '' else '$(find ur_description)/config/%s/joint_limits.yaml' % ur_type }"/>
+    <xacro:property name="kinematics_parameters_file"
+      value="${ kinematics_params if kinematics_params != '' else '$(find ur_description)/config/%s/default_kinematics.yaml' % ur_type }"/>
+    <xacro:property name="physical_parameters_file"
+      value="${ physical_params if physical_params != '' else '$(find ur_description)/config/%s/physical_parameters.yaml' % ur_type }"/>
+    <xacro:property name="visual_parameters_file"
+      value="${ visual_params if visual_params != '' else '$(find ur_description)/config/%s/visual_parameters.yaml' % ur_type }"/>
+
+    <xacro:property name="initial_positions_resolved"
+      value="${ initial_positions_file if initial_positions_file != '' else '$(find ur_description)/config/initial_positions.yaml' }"/>
+
+    <!-- Arm -->
+    <xacro:ur_robot
+      name="${name}"
+      tf_prefix="${tf_prefix}"
+      parent="${ur_parent}"
+      joint_limits_parameters_file="${joint_limits_parameters_file}"
+      kinematics_parameters_file="${kinematics_parameters_file}"
+      physical_parameters_file="${physical_parameters_file}"
+      visual_parameters_file="${visual_parameters_file}"
+      transmission_hw_interface="${transmission_hw_interface}"
+      safety_limits="${safety_limits}"
+      safety_pos_margin="${safety_pos_margin}"
+      safety_k_position="${safety_k_position}"
+      use_fake_hardware="${use_fake_hardware}"
+      fake_sensor_commands="${fake_sensor_commands}"
+      sim_gazebo="${sim_gazebo}"
+      sim_ignition="${sim_ignition}"
+      headless_mode="${headless_mode}"
+      initial_positions="${xacro.load_yaml(initial_positions_resolved)}"
+      use_tool_communication="${use_tool_communication}"
+      tool_voltage="${tool_voltage}"
+      tool_parity="${tool_parity}"
+      tool_baud_rate="${tool_baud_rate}"
+      tool_stop_bits="${tool_stop_bits}"
+      tool_rx_idle_chars="${tool_rx_idle_chars}"
+      tool_tx_idle_chars="${tool_tx_idle_chars}"
+      tool_device_name="${tool_device_name}"
+      tool_tcp_port="${tool_tcp_port}"
+      robot_ip="${robot_ip}"
+      script_filename="${script_filename}"
+      output_recipe_filename="${output_recipe_filename}"
+      input_recipe_filename="${input_recipe_filename}"
+      reverse_ip="${reverse_ip}"
+      script_command_port="${script_command_port}"
+      reverse_port="${reverse_port}"
+      script_sender_port="${script_sender_port}"
+      trajectory_port="${trajectory_port}">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </xacro:ur_robot>
+
+  </xacro:macro>
+</robot>

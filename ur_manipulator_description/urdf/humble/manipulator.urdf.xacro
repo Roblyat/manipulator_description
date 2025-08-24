@@ -15,7 +15,7 @@
 
   <!-- Include macros -->
   <xacro:include filename="$(find ur_manipulator_description)/urdf/base_attachment.urdf.xacro"/>
-  <xacro:include filename="$(find ur_manipulator_description)/xacro/rbyt_ur_mocked.xacro"/>
+  <xacro:include filename="$(find ur_manipulator_description)/xacro/humble/rbyt_ur_urdf.xacro"/>
 
   <!-- 1) Place the base/platform -->
   <xacro:base_attachment name="${robot_prefix}attachment" parent="world" />
