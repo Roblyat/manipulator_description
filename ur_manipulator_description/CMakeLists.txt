@@ -23,7 +23,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-install(DIRECTORY src urdf xacro
+install(DIRECTORY urdf xacro
   DESTINATION share/${PROJECT_NAME}
 )
 
